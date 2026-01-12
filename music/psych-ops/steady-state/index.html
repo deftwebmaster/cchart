@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steady State</title>
+  <meta name="description" content="I ain't 'not drinkin' anymore—I'm steady state.">
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Steady State">
+  <meta property="og:description" content="I ain't 'not drinkin' anymore—I'm steady state.">
+  <meta property="og:image" content="https://coldchart.com/music/psych-ops/steady-state/cover.png">
+  <meta property="og:url" content="https://coldchart.com/music/psych-ops/steady-state/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Steady State">
+  <meta name="twitter:description" content="I ain't 'not drinkin' anymore—I'm steady state.">
+  <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/steady-state/cover.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000;
+      color: #444;
+      line-height: 2;
+      font-size: 1.15rem;
+      min-height: 100vh;
+      transition: background-color 2s ease, color 1s ease;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20vh 1.5rem 15vh;
+    }
+
+    .verse {
+      margin-bottom: 3rem;
+      transition: color 1s ease;
+    }
+
+    .line {
+      margin-bottom: 0.4rem;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.6s ease, transform 0.6s ease, color 1s ease;
+    }
+
+    .line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .break {
+      height: 2.5rem;
+    }
+
+    /* Phase colors - darkest to lightest */
+    .phase-1 .line.visible { color: #666; }
+    .phase-2 .line.visible { color: #707070; }
+    .phase-3 .line.visible { color: #7a7a7a; }
+    .phase-4 .line.visible { color: #848484; }
+    .phase-5 .line.visible { color: #8e8e8e; }
+    .phase-6 .line.visible { color: #989898; }
+    .phase-7 .line.visible { color: #a2a2a2; }
+    .phase-8 .line.visible { color: #acacac; }
+    .phase-9 .line.visible { color: #b6b6b6; }
+    .phase-10 .line.visible { color: #c4c4c4; }
+    .phase-11 .line.visible { color: #d4d4d4; }
+    .phase-12 .line.visible { color: #e8e8e8; }
+    
+    /* Background phases */
+    body.bg-1 { background-color: #000; }
+    body.bg-2 { background-color: #050505; }
+    body.bg-3 { background-color: #0a0a0a; }
+    body.bg-4 { background-color: #0f0f0f; }
+    body.bg-5 { background-color: #121212; }
+    body.bg-6 { background-color: #151515; }
+    body.bg-7 { background-color: #181818; }
+    body.bg-8 { background-color: #1a1a1a; }
+    body.bg-9 { background-color: #1c1c1c; }
+    body.bg-10 { background-color: #1e1e1e; }
+    body.bg-11 { background-color: #202020; }
+    body.bg-12 { background-color: #242424; }
+
+    .closer {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    .closer.visible {
+      color: #fff !important;
+    }
+
+    .dose {
+      display: block;
+      margin: 2rem 0;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    .dose.visible {
+      opacity: 1;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      color: #666;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: 15vh 1.25rem 10vh;
+      }
+
+      .closer {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="verse phase-1">
+      <div class="line">Woke up sober world still heavy let me be straight</div>
+      <div class="line">Creditors clawin at me but I don't pay with my fate</div>
+      <div class="line">Money still tight and the math still stressed</div>
+      <div class="line">But I ain't tradin tomorrow for five minutes of rest</div>
+    </div>
+
+    <div class="verse phase-1">
+      <div class="line">Before that though—nah let me rewind the tape</div>
+      <div class="line">First month I wasn't brave I was plottin escape</div>
+      <div class="line">Didn't wanna not die I wanted the fuck out</div>
+      <div class="line">Swallowed every bar I had hopin to fade out</div>
+    </div>
+
+    <div class="verse phase-2">
+      <div class="line">That's rock bottom—ain't no metaphor needed</div>
+      <div class="line">I didn't wanna exist I just wanted it ended</div>
+      <div class="line">Tried to erase myself quiet pills in my palm</div>
+      <div class="line dose">Hundred twenty milligrams of alprazolam</div>
+    </div>
+
+    <div class="verse phase-2">
+      <div class="line">Woke up anyway. Hospital lights and the shakin</div>
+      <div class="line">Body in revolt every nerve overtaken</div>
+      <div class="line">Not fightin for a future just fightin the cell</div>
+      <div class="line">Detox in a gown at the gates of my hell</div>
+    </div>
+
+    <div class="verse phase-3">
+      <div class="line">Cops at the bedside pretendin to care</div>
+      <div class="line">Goin through my pockets while I'm gaspin for air</div>
+      <div class="line">Lookin for a charge while my vitals are crashin</div>
+      <div class="line">System don't save you it just processes the ashes</div>
+    </div>
+
+    <div class="verse phase-4">
+      <div class="line">Stayed loyal to my job they weren't loyal worth shit</div>
+      <div class="line">Fired me straight from the hospital bed I was in</div>
+      <div class="line">Dad caught me fallin but the net had a price</div>
+      <div class="line">Another master holdin strings callin it advice</div>
+    </div>
+
+    <div class="verse phase-4">
+      <div class="line">Safety with conditions, shelter with a leash</div>
+      <div class="line">Traded one dependency for another kind of lease</div>
+      <div class="line">Couldn't serve the bottle and serve his control</div>
+      <div class="line">Had to claw back pieces of my own damn soul</div>
+    </div>
+
+    <div class="verse phase-5">
+      <div class="line">White-knuckle weeks hyper-aware of the signs</div>
+      <div class="line">Is this hunger or panic am I losin my mind</div>
+      <div class="line">Every hour a system check every thought a suspect</div>
+      <div class="line">Keepin wheels on the wagon tryna not wreck the set</div>
+    </div>
+
+    <div class="verse phase-6">
+      <div class="line">Three months in they sayin "you look better my guy"</div>
+      <div class="line">Inside I'm still runnin diagnostics on why</div>
+      <div class="line">Silence felt loaded and peace felt staged</div>
+      <div class="line">Like the moment I trust it's the moment it breaks</div>
+    </div>
+
+    <div class="verse phase-7">
+      <div class="line">Then time crept back—empty hours in the day</div>
+      <div class="line">No chaos to manage no fires in the way</div>
+      <div class="line">Had to engineer rhythm that don't lean on relief</div>
+      <div class="line">Had to design the bad days so they don't turn to weeks</div>
+    </div>
+
+    <div class="verse phase-7">
+      <div class="line">Didn't do the steps didn't follow the script</div>
+      <div class="line">No higher power needed I just engineered the shit</div>
+      <div class="line">Built my own systems when the program didn't fit</div>
+      <div class="line">Turns out I don't need God—I need architecture</div>
+    </div>
+
+    <div class="verse phase-8">
+      <div class="line">Somewhere it shifted quiet as takin a breath</div>
+      <div class="line">Not drinkin stopped feelin like a bet against death</div>
+      <div class="line">Like not touchin a stove once you learned what it did</div>
+      <div class="line">No trophies for that—just the scars on the kid</div>
+    </div>
+
+    <div class="verse phase-9">
+      <div class="line">Now I don't ask "can I handle this sober and clean"</div>
+      <div class="line">I ask "is this worth what it's takin from me"</div>
+      <div class="line">Bandwidth is sacred I budget my strain</div>
+      <div class="line">Recovery's over—I'm maintainin the frame</div>
+    </div>
+
+    <div class="verse phase-9">
+      <div class="line">Life still ain't fixed I ain't sellin a dream</div>
+      <div class="line">Broke on paper still stuck in the squeeze</div>
+      <div class="line">But collectors can call I don't pick up for ghosts</div>
+      <div class="line">All I care about is today—fuck the rest, they can wait in line</div>
+    </div>
+
+    <div class="verse phase-10">
+      <div class="line">I don't chase relief I let discomfort pass</div>
+      <div class="line">Like weather that rolls through then moves on its ass</div>
+      <div class="line">I don't argue with urges don't give em a chair</div>
+      <div class="line">Buried enough versions of me to know better than care</div>
+    </div>
+
+    <div class="verse phase-11">
+      <div class="line">I didn't find peace didn't get myself saved</div>
+      <div class="line">Just stopped disappearin day after day after day</div>
+      <div class="line">Didn't conquer the dark didn't win the whole game</div>
+      <div class="line">Just stayed conscious long enough to finally change lanes</div>
+    </div>
+
+    <div class="verse phase-12">
+      <div class="line">Two-fifty today and I'm cuttin the weed</div>
+      <div class="line">Last crutch in the pile last thing I don't need</div>
+      <div class="line">Every substance that owned me can get in the grave</div>
+      <div class="line closer">I ain't "not drinkin" anymore—I'm steady state</div>
+    </div>
+
+  </div>
+
+  <footer>
+    My mind. My war. My terms.
+    <span>— Matt</span>
+  </footer>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    const verses = document.querySelectorAll('.verse');
+    const body = document.body;
+
+    // Track highest phase seen for background
+    let highestPhase = 0;
+
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target.closest('.verse');
+          const sectionLines = section.querySelectorAll('.line');
+          const index = Array.from(sectionLines).indexOf(entry.target);
+          
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 120);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -5% 0px',
+      threshold: 0.1
+    });
+
+    const verseObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Extract phase number from class
+          const classList = entry.target.className;
+          const phaseMatch = classList.match(/phase-(\d+)/);
+          if (phaseMatch) {
+            const phase = parseInt(phaseMatch[1]);
+            if (phase > highestPhase) {
+              highestPhase = phase;
+              // Remove old bg classes and add new one
+              for (let i = 1; i <= 12; i++) {
+                body.classList.remove('bg-' + i);
+              }
+              body.classList.add('bg-' + phase);
+            }
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -20% 0px',
+      threshold: 0.3
+    });
+
+    lines.forEach(line => lineObserver.observe(line));
+    verses.forEach(verse => verseObserver.observe(verse));
+  </script>
+</body>
+</html>

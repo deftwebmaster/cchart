@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misdiagnosed</title>
+  <meta name="description" content="I wasn't sick—just starved of a use.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Misdiagnosed">
+  <meta property="og:description" content="I wasn't sick—just starved of a use.">
+  <meta property="og:image" content="https://coldchart.com/music/psych-ops/misdiagnosed/cover.png">
+  <meta property="og:url" content="https://coldchart.com/music/psych-ops/misdiagnosed/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Misdiagnosed">
+  <meta name="twitter:description" content="I wasn't sick—just starved of a use.">
+  <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/misdiagnosed/cover.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000;
+      color: #999;
+      line-height: 1.9;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20vh 1.5rem 15vh;
+    }
+
+    .verse {
+      margin-bottom: 3rem;
+    }
+
+    .line {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateX(-5px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .line.visible {
+      opacity: 1;
+      transform: translateX(0);
+      animation: jitter 0.1s ease-in-out infinite;
+    }
+
+    @keyframes jitter {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-0.5px) translateY(0.3px);
+      }
+      50% {
+        transform: translateX(0.5px) translateY(-0.3px);
+      }
+      75% {
+        transform: translateX(-0.3px) translateY(0.5px);
+      }
+    }
+
+    .line:nth-child(odd).visible {
+      animation-duration: 0.12s;
+    }
+
+    .line:nth-child(3n).visible {
+      animation-duration: 0.08s;
+    }
+
+    .finale .line {
+      color: #666;
+      transition: color 0.3s ease;
+    }
+
+    .finale.in-view .line {
+      color: #e0e0e0;
+    }
+
+    .finale .closer {
+      font-weight: 600;
+      font-size: 1.35rem;
+      margin-top: 1rem;
+    }
+
+    .finale.in-view .closer {
+      color: #fff;
+      animation: jitter 0.06s ease-in-out infinite;
+    }
+
+    footer {
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      color: #333;
+      font-size: 0.85rem;
+      font-style: italic;
+      letter-spacing: 0.05em;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-size: 0.75rem;
+      color: #222;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1.05rem;
+      }
+
+      .container {
+        padding: 15vh 1.25rem 10vh;
+      }
+
+      .finale .closer {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="verse">
+      <div class="line">Manic cuz I gotta be, alive when I wasn't supposed to be</div>
+      <div class="line">Therapists would bill me hourly for the shit I vent in bars</div>
+      <div class="line">Seven tracks deep and I ain't even hit the peak of me</div>
+      <div class="line">Brain off the leash now watch me leave the scars</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Used to be a mess, now I'm mess with a method</div>
+      <div class="line">Turned my own wreckage into somethin they can't edit</div>
+      <div class="line">They told me slow down, told me breathe, told me chill</div>
+      <div class="line">Nah I spent a decade numb—I'm here for the kill</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Watch me flex on the beat like I ain't almost died</div>
+      <div class="line">Like I wasn't flatlinin with the poison inside</div>
+      <div class="line">Now I'm runnin laps around the version that drowned</div>
+      <div class="line">Spittin so fast you can't keep up with the sound</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">A terror when in the bottle, always full throttle</div>
+      <div class="line">Chasin oblivion like I won the fuckin lotto</div>
+      <div class="line">Now I'm sober with the same intensity</div>
+      <div class="line">The only difference is the fuel that's drivin me</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Call it manic, I call it engine finally caught</div>
+      <div class="line">After years of runnin dead, this is everything I got</div>
+      <div class="line">Erratic just means the motor turned after years off</div>
+      <div class="line">You mistake the acceleration for the wiring gone soft</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">But soft is what I was, numb is what I knew</div>
+      <div class="line">Quiet was the coffin I was settlin into</div>
+      <div class="line">Now I'm loud and I'm live and I'm movin too quick</div>
+      <div class="line">For the people who wanted me silent and sick</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Same fire, different chimney, same heat, different aim</div>
+      <div class="line">I was always gonna burn—now I control the flame</div>
+      <div class="line">Traded self-destruction for construction at speed</div>
+      <div class="line">Same energy that almost killed me is the energy I need</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">So I'll take the chaos, take the wire, take the heat</div>
+      <div class="line">Over the flatline, over the defeat</div>
+      <div class="line">Every syllable proof that the dead man woke</div>
+      <div class="line">Every bar another system I wrote</div>
+    </div>
+
+    <div class="verse finale" id="finale">
+      <div class="line">From shakin in a ward to shakin up the frame</div>
+      <div class="line">If this is "manic," don't cure me—aim</div>
+      <div class="line">Don't need a cure, need a target and truth</div>
+      <div class="line closer">I wasn't sick—just starved of a use</div>
+    </div>
+
+  </div>
+
+  <footer>
+    My mind. My war. My terms.
+    <span>— Matt</span>
+  </footer>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    const finale = document.getElementById('finale');
+
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target.closest('.verse');
+          if (section) {
+            const sectionLines = section.querySelectorAll('.line');
+            const index = Array.from(sectionLines).indexOf(entry.target);
+            // Fast reveal - 50ms between lines instead of 120ms
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 50);
+          } else {
+            entry.target.classList.add('visible');
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -5% 0px',
+      threshold: 0.1
+    });
+
+    lines.forEach(line => lineObserver.observe(line));
+
+    const finaleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    finaleObserver.observe(finale);
+  </script>
+</body>
+</html>

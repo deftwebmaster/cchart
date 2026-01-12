@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autopsy</title>
+  <meta name="description" content="I killed him myself. And I'd do it again without fear.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Autopsy">
+  <meta property="og:description" content="I killed him myself. And I'd do it again without fear.">
+  <meta property="og:image" content="https://coldchart.com/music/psych-ops/autopsy/cover.png">
+  <meta property="og:url" content="https://coldchart.com/music/psych-ops/autopsy/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Autopsy">
+  <meta name="twitter:description" content="I killed him myself. And I'd do it again without fear.">
+  <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/autopsy/cover.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000;
+      color: #999;
+      line-height: 1.9;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20vh 1.5rem 15vh;
+    }
+
+    .verse {
+      margin-bottom: 3rem;
+    }
+
+    .line {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .finale .line {
+      color: #666;
+      transition: color 0.8s ease;
+    }
+
+    .finale.in-view .line {
+      color: #e0e0e0;
+    }
+
+    .finale .closer {
+      font-weight: 600;
+      font-size: 1.35rem;
+      margin-top: 1rem;
+    }
+
+    .finale.in-view .closer {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      color: #333;
+      font-size: 0.85rem;
+      font-style: italic;
+      letter-spacing: 0.05em;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-size: 0.75rem;
+      color: #222;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1.05rem;
+      }
+
+      .container {
+        padding: 15vh 1.25rem 10vh;
+      }
+
+      .finale .closer {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="verse">
+      <div class="line">Here lies the version of me that never made it out</div>
+      <div class="line">Seventeen years old when the bottle found his mouth</div>
+      <div class="line">By nineteen he was daily, by twenty-one a slave</div>
+      <div class="line">Started drinkin legally already diggin his grave</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">I don't know who he was before the poison set in</div>
+      <div class="line">Just a kid with a future that never got to begin</div>
+      <div class="line">Can't mourn someone I never got the chance to meet</div>
+      <div class="line">Can't miss a foundation when you never had the concrete</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">So this ain't rediscovery, this is discovery</div>
+      <div class="line">First time meetin myself without the coverup of the</div>
+      <div class="line">Chemicals I used to fill the space where a person should be</div>
+      <div class="line">Thirty-something years old and I'm just startin to see</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Ambition died first—I was gonna be somethin</div>
+      <div class="line">Entrepreneur dreams, big plans, not just bummin</div>
+      <div class="line">Now I'm entry level, startin over from scratch</div>
+      <div class="line">Same applications as a high school kid—how's that for a catch</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">The version that died had a shot, had a lane</div>
+      <div class="line">Had a decade head start that went straight down the drain</div>
+      <div class="line">Every year I drank was a year I didn't build</div>
+      <div class="line">Every blackout a blueprint that never got filled</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">He almost made it once—three months clean and countin</div>
+      <div class="line">Rehab at the Abbey, thought I'd finally found the mountain</div>
+      <div class="line">Learned the lessons, did the work, felt the clarity</div>
+      <div class="line">But I didn't build the systems, just borrowed the sobriety</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Day 100 I collapsed, fell right back in the hole</div>
+      <div class="line">Turns out willpower alone don't save a soul</div>
+      <div class="line">That version died thinkin he could white-knuckle through</div>
+      <div class="line">Didn't know what I know now—you gotta engineer the new</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Cause of death? A thousand cuts, not a single blow</div>
+      <div class="line">Bled out slow over years that I'll never get to know</div>
+      <div class="line">Every mornin I chose the bottle over the life</div>
+      <div class="line">Every night I drowned the kid who could've had a wife</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Could've had a career, could've had a path</div>
+      <div class="line">Could've done the math before the math did the aftermath</div>
+      <div class="line">But he didn't. And he's gone. And I'm what's left.</div>
+      <div class="line">The version that survived by acceptin his death</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">So here's the burial—I'm puttin him in the ground</div>
+      <div class="line">Not with tears, not with grief, not a sorrowful sound</div>
+      <div class="line">Just a clinical goodbye to the man I couldn't save</div>
+      <div class="line">I had to let him die so I could crawl out of the grave</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Do I mourn him? Nah. He kept me stuck for years.</div>
+      <div class="line">Do I miss him? Nah. He was drownin in his fears.</div>
+      <div class="line">Is he still in me? Maybe. Traces in the code.</div>
+      <div class="line">But I'm runnin different software down a different road</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Current Matt has systems, frameworks, architecture</div>
+      <div class="line">Builder mentality, not a beggar at the lecture</div>
+      <div class="line">I didn't find myself, I'm buildin him from scratch</div>
+      <div class="line">The version that died couldn't do that—and that's a fact</div>
+    </div>
+
+    <div class="verse finale" id="finale">
+      <div class="line">So goodbye to the ghost, I'm done carryin his weight</div>
+      <div class="line">I survived by killin the part that wanted to stay</div>
+      <div class="line">The version that died is the reason I'm still here</div>
+      <div class="line closer">I killed him myself. And I'd do it again without fear.</div>
+    </div>
+
+  </div>
+
+  <footer>
+    My mind. My war. My terms.
+    <span>— Matt</span>
+  </footer>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    const finale = document.getElementById('finale');
+
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target.closest('.verse');
+          if (section) {
+            const sectionLines = section.querySelectorAll('.line');
+            const index = Array.from(sectionLines).indexOf(entry.target);
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 120);
+          } else {
+            entry.target.classList.add('visible');
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -5% 0px',
+      threshold: 0.1
+    });
+
+    lines.forEach(line => lineObserver.observe(line));
+
+    const finaleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    finaleObserver.observe(finale);
+  </script>
+</body>
+</html>

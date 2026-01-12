@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Both Doors</title>
+  <meta name="description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Both Doors">
+  <meta property="og:description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
+  <meta property="og:image" content="https://coldchart.com/music/psych-ops/both-doors/cover.png">
+  <meta property="og:url" content="https://coldchart.com/music/psych-ops/both-doors/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Both Doors">
+  <meta name="twitter:description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
+  <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/both-doors/cover.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000;
+      color: #999;
+      line-height: 1.9;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 20vh 1.5rem 15vh;
+    }
+
+    .verse {
+      margin-bottom: 3rem;
+    }
+
+    .line {
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pivot {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #333;
+      margin: 6rem 0 3rem;
+      letter-spacing: 0.1em;
+      opacity: 0;
+      transition: opacity 1s ease, color 1s ease;
+    }
+
+    .pivot.visible {
+      opacity: 1;
+      color: #ccc;
+    }
+
+    .finale .line {
+      color: #666;
+      transition: color 0.8s ease;
+    }
+
+    .finale.in-view .line {
+      color: #e0e0e0;
+    }
+
+    .finale .closer {
+      font-weight: 600;
+      font-size: 1.35rem;
+      margin-top: 1rem;
+    }
+
+    .finale.in-view .closer {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 8rem 1.5rem 4rem;
+      color: #333;
+      font-size: 0.85rem;
+      font-style: italic;
+      letter-spacing: 0.05em;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-size: 0.75rem;
+      color: #222;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 1.05rem;
+      }
+
+      .container {
+        padding: 15vh 1.25rem 10vh;
+      }
+
+      .pivot {
+        font-size: 1.25rem;
+      }
+
+      .finale .closer {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="verse">
+      <div class="line">My name Matt, not manic, no panic</div>
+      <div class="line">Mind move fast but I'm no longer frantic</div>
+      <div class="line">Thoughts still race but they too sharp to catch me</div>
+      <div class="line">See the lanes now, I was blind and it trapped me</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">I was in dark, not a flicker to find</div>
+      <div class="line">All I could think was the next drink on my mind</div>
+      <div class="line">Where do I get it and how do I hide it</div>
+      <div class="line">Every decision was built around buyin it</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Duckin and lyin, survivin and timin it</div>
+      <div class="line">Couldn't go a single day without tryin it</div>
+      <div class="line">Fumbled through shadows, a decade of static</div>
+      <div class="line">Lost every compass but swore I could have it</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Always runnin, never arrivin</div>
+      <div class="line">Couldn't tell livin from just survivin</div>
+      <div class="line">Woke up needin, went to bed owin</div>
+      <div class="line">Decade of my life and I watched it keep goin</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Two days clean? Man, I didn't believe it</div>
+      <div class="line">Three felt like prison, I wanted to leave it</div>
+      <div class="line">I was shakin so bad I couldn't hold water</div>
+      <div class="line">Terrified to drink, terrified not to bother</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">You ever been stuck where both doors are death?</div>
+      <div class="line">Drink and it kills you, quit and lose your breath</div>
+      <div class="line">DTs lurkin like a promise in the shadows</div>
+      <div class="line">Seizure on the floor or another night to battle</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">I wasn't choosin sobriety I was choosin survival</div>
+      <div class="line">Every sip a gamble, every morning a rival</div>
+      <div class="line">Couldn't tell you when the last day was I felt safe</div>
+      <div class="line">Just knew I was runnin out of time and space</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">I wanted out so bad I could taste it</div>
+      <div class="line">But the dark was so deep I couldn't even face it</div>
+      <div class="line">No surface in sight, no up and no down</div>
+      <div class="line">Just me and the bottle and the fear of the sound</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">Of my own heart stoppin if I kept this pace</div>
+      <div class="line">Or my brain shuttin off if I tried to escape</div>
+      <div class="line">That's the trap they don't tell you in the pamphlets</div>
+      <div class="line">When your body's the prison and you built the damn brackets</div>
+    </div>
+
+    <div class="verse">
+      <div class="line">I wasn't brave, I was cornered and desperate</div>
+      <div class="line">Clawed my way up cause the alternative was death and</div>
+      <div class="line">Somehow I'm here and I still don't understand it</div>
+      <div class="line">Just know I reached blind and somethin finally landed</div>
+    </div>
+
+    <div class="pivot" id="pivot">
+      —now watch me
+    </div>
+
+    <div class="verse finale" id="finale">
+      <div class="line">Two-fifty deep, I came back from the static</div>
+      <div class="line">Built my way out when they wrote me off as tragic</div>
+      <div class="line">I don't need your permission to finally exist</div>
+      <div class="line closer">I architect life now—try and fuck with this</div>
+    </div>
+
+  </div>
+
+  <footer>
+    My mind. My war. My terms.
+    <span>— Matt</span>
+  </footer>
+
+  <script>
+    const lines = document.querySelectorAll('.line');
+    const pivot = document.getElementById('pivot');
+    const finale = document.getElementById('finale');
+
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target.closest('.verse');
+          if (section) {
+            const sectionLines = section.querySelectorAll('.line');
+            const index = Array.from(sectionLines).indexOf(entry.target);
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 120);
+          } else {
+            entry.target.classList.add('visible');
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -5% 0px',
+      threshold: 0.1
+    });
+
+    lines.forEach(line => lineObserver.observe(line));
+
+    const pivotObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    pivotObserver.observe(pivot);
+
+    const finaleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    finaleObserver.observe(finale);
+  </script>
+</body>
+</html>
