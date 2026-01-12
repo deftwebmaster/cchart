@@ -1,79 +1,44 @@
+<!-- * lone wolf, quiet teeth | Matt Livingston -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Misdiagnosed</title>
+  <title>Misdiagnosed — Psych Ops</title>
   <meta name="description" content="I wasn't sick—just starved of a use.">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Misdiagnosed">
+  <meta property="og:title" content="Misdiagnosed — Psych Ops">
   <meta property="og:description" content="I wasn't sick—just starved of a use.">
   <meta property="og:image" content="https://coldchart.com/music/psych-ops/misdiagnosed/cover.png">
   <meta property="og:url" content="https://coldchart.com/music/psych-ops/misdiagnosed/">
   
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Misdiagnosed">
+  <meta name="twitter:title" content="Misdiagnosed — Psych Ops">
   <meta name="twitter:description" content="I wasn't sick—just starved of a use.">
   <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/misdiagnosed/cover.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #000;
-      color: #999;
-      line-height: 1.9;
-      font-size: 1.2rem;
-    }
-
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 20vh 1.5rem 15vh;
-    }
-
-    .verse {
-      margin-bottom: 3rem;
-    }
-
+    /* Manic jitter effect */
     .line {
-      margin-bottom: 0.5rem;
-      opacity: 0;
-      transform: translateX(-5px);
+      transform: translateX(-3px);
       transition: opacity 0.15s ease, transform 0.15s ease;
     }
 
     .line.visible {
-      opacity: 1;
-      transform: translateX(0);
       animation: jitter 0.1s ease-in-out infinite;
     }
 
     @keyframes jitter {
-      0%, 100% {
-        transform: translateX(0);
-      }
-      25% {
-        transform: translateX(-0.5px) translateY(0.3px);
-      }
-      50% {
-        transform: translateX(0.5px) translateY(-0.3px);
-      }
-      75% {
-        transform: translateX(-0.3px) translateY(0.5px);
-      }
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-0.4px) translateY(0.2px); }
+      50% { transform: translateX(0.4px) translateY(-0.2px); }
+      75% { transform: translateX(-0.2px) translateY(0.4px); }
     }
 
     .line:nth-child(odd).visible {
@@ -84,60 +49,37 @@
       animation-duration: 0.08s;
     }
 
-    .finale .line {
-      color: #666;
-      transition: color 0.3s ease;
-    }
-
-    .finale.in-view .line {
-      color: #e0e0e0;
-    }
-
-    .finale .closer {
-      font-weight: 600;
-      font-size: 1.35rem;
-      margin-top: 1rem;
-    }
-
     .finale.in-view .closer {
-      color: #fff;
       animation: jitter 0.06s ease-in-out infinite;
     }
 
-    footer {
-      text-align: center;
-      padding: 8rem 1.5rem 4rem;
-      color: #333;
-      font-size: 0.85rem;
-      font-style: italic;
-      letter-spacing: 0.05em;
-    }
-
-    footer span {
-      display: block;
-      margin-top: 1rem;
-      font-style: normal;
-      font-size: 0.75rem;
-      color: #222;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        font-size: 1.05rem;
-      }
-
-      .container {
-        padding: 15vh 1.25rem 10vh;
-      }
-
-      .finale .closer {
-        font-size: 1.2rem;
+    @media (prefers-reduced-motion: reduce) {
+      .line.visible,
+      .finale.in-view .closer {
+        animation: none;
       }
     }
   </style>
 </head>
 <body>
+  
+  <nav class="top-nav">
+    <a href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Psych Ops
+    </a>
+    <span class="track-indicator">07 / 07</span>
+  </nav>
+
   <div class="container">
+    
+    <header class="track-header">
+      <div class="track-number">Track 07</div>
+      <h1 class="track-title">Misdiagnosed</h1>
+      <p class="track-desc">The manic flex. The engine caught.</p>
+    </header>
 
     <div class="verse">
       <div class="line">Manic cuz I gotta be, alive when I wasn't supposed to be</div>
@@ -206,48 +148,66 @@
 
   <footer>
     My mind. My war. My terms.
-    <span>— Matt</span>
+    <span class="sig">— Matt</span>
   </footer>
 
+  <nav class="track-nav">
+    <a href="../redacted/" class="prev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Redacted
+    </a>
+    <a href="../debrief/" class="next">
+      Debrief
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+  </nav>
+
   <script>
+    // Faster reveal for manic energy
     const lines = document.querySelectorAll('.line');
     const finale = document.getElementById('finale');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const lineObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const section = entry.target.closest('.verse');
-          if (section) {
-            const sectionLines = section.querySelectorAll('.line');
-            const index = Array.from(sectionLines).indexOf(entry.target);
-            // Fast reveal - 50ms between lines instead of 120ms
-            setTimeout(() => {
+    if (!prefersReducedMotion) {
+      const lineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const section = entry.target.closest('.verse');
+            if (section) {
+              const sectionLines = section.querySelectorAll('.line');
+              const index = Array.from(sectionLines).indexOf(entry.target);
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, index * 50); // Faster than normal
+            } else {
               entry.target.classList.add('visible');
-            }, index * 50);
-          } else {
-            entry.target.classList.add('visible');
+            }
           }
-        }
+        });
+      }, {
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0.1
       });
-    }, {
-      root: null,
-      rootMargin: '0px 0px -5% 0px',
-      threshold: 0.1
-    });
 
-    lines.forEach(line => lineObserver.observe(line));
+      lines.forEach(line => lineObserver.observe(line));
 
-    const finaleObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
+      const finaleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.3 });
 
-    finaleObserver.observe(finale);
+      finaleObserver.observe(finale);
+    } else {
+      lines.forEach(line => line.classList.add('visible'));
+      finale.classList.add('in-view');
+    }
   </script>
 </body>
 </html>

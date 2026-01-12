@@ -1,140 +1,48 @@
+<!-- * lone wolf, steady course | Matt Livingston -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Both Doors</title>
+  <title>Both Doors — Psych Ops</title>
   <meta name="description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Both Doors">
-  <meta property="og:description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
+  <meta property="og:title" content="Both Doors — Psych Ops">
+  <meta property="og:description" content="You ever been stuck where both doors are death?">
   <meta property="og:image" content="https://coldchart.com/music/psych-ops/both-doors/cover.png">
   <meta property="og:url" content="https://coldchart.com/music/psych-ops/both-doors/">
   
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Both Doors">
-  <meta name="twitter:description" content="You ever been stuck where both doors are death? My story. My words. Your background music.">
+  <meta name="twitter:title" content="Both Doors — Psych Ops">
+  <meta name="twitter:description" content="You ever been stuck where both doors are death?">
   <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/both-doors/cover.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #000;
-      color: #999;
-      line-height: 1.9;
-      font-size: 1.2rem;
-    }
-
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 20vh 1.5rem 15vh;
-    }
-
-    .verse {
-      margin-bottom: 3rem;
-    }
-
-    .line {
-      margin-bottom: 0.5rem;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .line.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .pivot {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #333;
-      margin: 6rem 0 3rem;
-      letter-spacing: 0.1em;
-      opacity: 0;
-      transition: opacity 1s ease, color 1s ease;
-    }
-
-    .pivot.visible {
-      opacity: 1;
-      color: #ccc;
-    }
-
-    .finale .line {
-      color: #666;
-      transition: color 0.8s ease;
-    }
-
-    .finale.in-view .line {
-      color: #e0e0e0;
-    }
-
-    .finale .closer {
-      font-weight: 600;
-      font-size: 1.35rem;
-      margin-top: 1rem;
-    }
-
-    .finale.in-view .closer {
-      color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 8rem 1.5rem 4rem;
-      color: #333;
-      font-size: 0.85rem;
-      font-style: italic;
-      letter-spacing: 0.05em;
-    }
-
-    footer span {
-      display: block;
-      margin-top: 1rem;
-      font-style: normal;
-      font-size: 0.75rem;
-      color: #222;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        font-size: 1.05rem;
-      }
-
-      .container {
-        padding: 15vh 1.25rem 10vh;
-      }
-
-      .pivot {
-        font-size: 1.25rem;
-      }
-
-      .finale .closer {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../shared.css">
 </head>
 <body>
+  
+  <nav class="top-nav">
+    <a href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Psych Ops
+    </a>
+    <span class="track-indicator">01 / 07</span>
+  </nav>
+
   <div class="container">
+    
+    <header class="track-header">
+      <div class="track-number">Track 01</div>
+      <h1 class="track-title">Both Doors</h1>
+      <p class="track-desc">The decade. The trap.</p>
+    </header>
     
     <div class="verse">
       <div class="line">My name Matt, not manic, no panic</div>
@@ -221,60 +129,24 @@
 
   <footer>
     My mind. My war. My terms.
-    <span>— Matt</span>
+    <span class="sig">— Matt</span>
   </footer>
 
-  <script>
-    const lines = document.querySelectorAll('.line');
-    const pivot = document.getElementById('pivot');
-    const finale = document.getElementById('finale');
+  <nav class="track-nav">
+    <a href="#" class="prev hidden">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Previous
+    </a>
+    <a href="../the-mask/" class="next">
+      The Mask
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+  </nav>
 
-    const lineObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const section = entry.target.closest('.verse');
-          if (section) {
-            const sectionLines = section.querySelectorAll('.line');
-            const index = Array.from(sectionLines).indexOf(entry.target);
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 120);
-          } else {
-            entry.target.classList.add('visible');
-          }
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px 0px -5% 0px',
-      threshold: 0.1
-    });
-
-    lines.forEach(line => lineObserver.observe(line));
-
-    const pivotObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
-
-    pivotObserver.observe(pivot);
-
-    const finaleObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
-
-    finaleObserver.observe(finale);
-  </script>
+  <script src="../shared.js"></script>
 </body>
 </html>

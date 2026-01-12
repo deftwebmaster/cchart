@@ -1,77 +1,32 @@
+<!-- * lone wolf, open range | Matt Livingston -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steady State</title>
+  <title>Steady State — Psych Ops</title>
   <meta name="description" content="I ain't 'not drinkin' anymore—I'm steady state.">
   <meta name="robots" content="noindex, nofollow">
-  
-  <!-- Open Graph -->
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Steady State">
+  <meta property="og:title" content="Steady State — Psych Ops">
   <meta property="og:description" content="I ain't 'not drinkin' anymore—I'm steady state.">
   <meta property="og:image" content="https://coldchart.com/music/psych-ops/steady-state/cover.png">
   <meta property="og:url" content="https://coldchart.com/music/psych-ops/steady-state/">
   
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Steady State">
+  <meta name="twitter:title" content="Steady State — Psych Ops">
   <meta name="twitter:description" content="I ain't 'not drinkin' anymore—I'm steady state.">
   <meta name="twitter:image" content="https://coldchart.com/music/psych-ops/steady-state/cover.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #000;
-      color: #444;
-      line-height: 2;
-      font-size: 1.15rem;
-      min-height: 100vh;
-      transition: background-color 2s ease, color 1s ease;
-    }
-
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 20vh 1.5rem 15vh;
-    }
-
-    .verse {
-      margin-bottom: 3rem;
-      transition: color 1s ease;
-    }
-
-    .line {
-      margin-bottom: 0.4rem;
-      opacity: 0;
-      transform: translateY(15px);
-      transition: opacity 0.6s ease, transform 0.6s ease, color 1s ease;
-    }
-
-    .line.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .break {
-      height: 2.5rem;
-    }
-
-    /* Phase colors - darkest to lightest */
+    /* Phase colors - darkness to light progression */
+    body { transition: background-color 1.5s ease; }
+    
     .phase-1 .line.visible { color: #666; }
     .phase-2 .line.visible { color: #707070; }
     .phase-3 .line.visible { color: #7a7a7a; }
@@ -85,68 +40,52 @@
     .phase-11 .line.visible { color: #d4d4d4; }
     .phase-12 .line.visible { color: #e8e8e8; }
     
-    /* Background phases */
-    body.bg-1 { background-color: #000; }
-    body.bg-2 { background-color: #050505; }
-    body.bg-3 { background-color: #0a0a0a; }
-    body.bg-4 { background-color: #0f0f0f; }
-    body.bg-5 { background-color: #121212; }
-    body.bg-6 { background-color: #151515; }
-    body.bg-7 { background-color: #181818; }
-    body.bg-8 { background-color: #1a1a1a; }
-    body.bg-9 { background-color: #1c1c1c; }
-    body.bg-10 { background-color: #1e1e1e; }
-    body.bg-11 { background-color: #202020; }
-    body.bg-12 { background-color: #242424; }
-
-    .closer {
-      font-weight: 600;
-      font-size: 1.25rem;
-    }
-
-    .closer.visible {
-      color: #fff !important;
-    }
+    body.bg-1 { background-color: #0c0b0a; }
+    body.bg-2 { background-color: #0d0c0b; }
+    body.bg-3 { background-color: #0e0d0c; }
+    body.bg-4 { background-color: #0f0e0d; }
+    body.bg-5 { background-color: #100f0e; }
+    body.bg-6 { background-color: #11100f; }
+    body.bg-7 { background-color: #121110; }
+    body.bg-8 { background-color: #131211; }
+    body.bg-9 { background-color: #141312; }
+    body.bg-10 { background-color: #151413; }
+    body.bg-11 { background-color: #161514; }
+    body.bg-12 { background-color: #171615; }
 
     .dose {
       display: block;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       opacity: 0;
-      transition: opacity 1.5s ease;
+      transition: opacity 1s ease;
     }
-
     .dose.visible {
       opacity: 1;
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 8rem 1.5rem 4rem;
-      color: #666;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        font-size: 1rem;
-      }
-
-      .container {
-        padding: 15vh 1.25rem 10vh;
-      }
-
-      .closer {
-        font-size: 1.15rem;
-      }
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
+  
+  <nav class="top-nav">
+    <a href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Psych Ops
+    </a>
+    <span class="track-indicator">05 / 07</span>
+  </nav>
+
   <div class="container">
+    
+    <header class="track-header">
+      <div class="track-number">Track 05</div>
+      <h1 class="track-title">Steady State</h1>
+      <p class="track-desc">The climb. Operating sober.</p>
+    </header>
 
     <div class="verse phase-1">
       <div class="line">Woke up sober world still heavy let me be straight</div>
@@ -260,7 +199,7 @@
       <div class="line">Just stayed conscious long enough to finally change lanes</div>
     </div>
 
-    <div class="verse phase-12">
+    <div class="verse phase-12 finale" id="finale">
       <div class="line">Two-fifty today and I'm cuttin the weed</div>
       <div class="line">Last crutch in the pile last thing I don't need</div>
       <div class="line">Every substance that owned me can get in the grave</div>
@@ -271,46 +210,39 @@
 
   <footer>
     My mind. My war. My terms.
-    <span>— Matt</span>
+    <span class="sig">— Matt</span>
   </footer>
 
+  <nav class="track-nav">
+    <a href="../autopsy/" class="prev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+      Autopsy
+    </a>
+    <a href="../redacted/" class="next">
+      Redacted
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </a>
+  </nav>
+
   <script>
-    const lines = document.querySelectorAll('.line');
+    // Phase-based background progression
     const verses = document.querySelectorAll('.verse');
     const body = document.body;
-
-    // Track highest phase seen for background
     let highestPhase = 0;
-
-    const lineObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const section = entry.target.closest('.verse');
-          const sectionLines = section.querySelectorAll('.line');
-          const index = Array.from(sectionLines).indexOf(entry.target);
-          
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 120);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px 0px -5% 0px',
-      threshold: 0.1
-    });
 
     const verseObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Extract phase number from class
           const classList = entry.target.className;
           const phaseMatch = classList.match(/phase-(\d+)/);
           if (phaseMatch) {
             const phase = parseInt(phaseMatch[1]);
             if (phase > highestPhase) {
               highestPhase = phase;
-              // Remove old bg classes and add new one
               for (let i = 1; i <= 12; i++) {
                 body.classList.remove('bg-' + i);
               }
@@ -320,13 +252,12 @@
         }
       });
     }, {
-      root: null,
       rootMargin: '0px 0px -20% 0px',
       threshold: 0.3
     });
 
-    lines.forEach(line => lineObserver.observe(line));
     verses.forEach(verse => verseObserver.observe(verse));
   </script>
+  <script src="../shared.js"></script>
 </body>
 </html>
